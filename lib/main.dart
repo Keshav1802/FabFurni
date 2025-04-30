@@ -103,8 +103,8 @@ class _MyAppState extends State<MyApp> {
     _connectivitySubscription = Connectivity()
         .onConnectivityChanged
         .listen(_handleConnectivityChange);
-    final result = await Connectivity().checkConnectivity();
-    _handleConnectivityChange([result]);
+    // final result = await Connectivity().checkConnectivity();
+    // _handleConnectivityChange([result]);
   }
 
   void _handleConnectivityChange(List<ConnectivityResult> result) {
@@ -144,14 +144,14 @@ class _MyAppState extends State<MyApp> {
                   .copyWith(textScaler: TextScaler.linear(1.0)),
               child: child!,
             )
-          : const ConnectionLostScreen(),
+          :  ConnectionLostScreen(),
       theme: ThemeData(visualDensity: VisualDensity.standard),
       translations: AppLocalization(),
       locale: Get.deviceLocale,
       fallbackLocale: const Locale('en', 'US'),
       title: 'FabFurni',
       initialBinding: InitialBindings(),
-      home: const SplashScreen(),
+      home:  SplashScreen(),
       getPages: AppRoutes.pages,
     );
   }
