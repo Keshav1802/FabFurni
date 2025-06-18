@@ -34,7 +34,7 @@ if (flutterVersionName == null) {
 
 android {
     namespace = "com.keshavsapplication.app"
-    compileSdk 34
+    compileSdk 35
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'

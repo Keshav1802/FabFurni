@@ -98,8 +98,6 @@ class _landingPage1State extends State<landingPage1> {
   @override
   Widget build(BuildContext context) {
     return PersistentTabView(
-    
-      onWillPop: _onWillPop,
       tabs: [
         PersistentTabConfig(
           screen: HomeScreen1(),
